@@ -1,0 +1,28 @@
+name: "Upgrade AKS Version"
+author: "kawahara"
+description: "Upgrade AKS Version"
+branding:
+  icon: "arrow-up-circle"
+  color: "blue"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+inputs:
+  name:
+    description: "Name of the managed cluster."
+    required: true
+  resource_group:
+    description: "Name of resource group."
+    required: true
+  control_plane_only:
+    description: "Upgrade the cluster control plane only. If not specified, both control plane AND all node pools will be upgraded."
+    required: false
+  kubernetes_version:
+    description: "Version of Kubernetes to upgrade the cluster to, such as '1.16.9'."
+    required: false
+  no_wait:
+    description: "Do not wait for the long-running operation to finish."
+    required: false
+  node_image_only:
+    description: "Only upgrade node image for agent pools."
+    required: false

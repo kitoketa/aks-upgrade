@@ -1,0 +1,20 @@
+name: Upgrade AKS Test
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Name of the managed cluster."
+        required: true
+      resource_group:
+        description: "Name of resource group."
+        required: true
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test
+        uses: taketoki-kawahara/aks-upgrade@main
+        with:
+          name: ${{ inputs.name }}
+          resource_group: ${{ inputs.resource_group }}
