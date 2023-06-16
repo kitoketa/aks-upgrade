@@ -19,7 +19,7 @@ def main():
         '--kubernetes-version', kubernetes_version,
         '--control_plane_only', control_plane_only,
         '--no_wait', no_wait,
-        '--node_image_only', node_image_only
+        '--node_image_only', node_image_only,
         '--yes', 'True'
     ]
     cli.invoke(AKS_UPGRADE)
