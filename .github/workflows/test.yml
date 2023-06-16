@@ -8,13 +8,25 @@ on:
       resource_group:
         description: "Name of resource group."
         required: true
+      kubernetes_version:
+        description: "Version of Kubernetes to upgrade the cluster to, such as '1.16.9'."
+        required: true
+      control_plane_only:
+        description: "Upgrade the cluster control plane only. If not specified, both control plane AND all node pools will be upgraded."
+        required: false
+      no_wait:
+        description: "Do not wait for the long-running operation to finish."
+        required: false
+      node_image_only:
+        description: "Only upgrade node image for agent pools."
+        required: false
       
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Test
-        uses: taketoki-kawahara/aks-upgrade@main
+        uses: kitoketa/aks-upgrade@main
         with:
           name: ${{ inputs.name }}
           resource_group: ${{ inputs.resource_group }}
