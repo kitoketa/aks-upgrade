@@ -34,3 +34,4 @@ jobs:
         with:
           name: ${{ inputs.name }}
           resource_group: ${{ inputs.resource_group }}
+          kubernetes_version: ${{ inputs.kubernetes_version }}
