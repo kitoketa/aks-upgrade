@@ -12,6 +12,14 @@ def main():
     node_image_only = environ.get('INPUT_NODE_IMAGE_ONLY', False)
     
     cli = get_default_cli()
+
+    AKS_GET_CREDENTIALS = [
+        'aks get-credentials',
+        '--resource-group', resource_group,
+        '--name', name
+    ]
+    cli.invoke(AKS_GET_CREDENTIALS)
+
     AKS_UPGRADE = [
         'aks upgrade',
         '--name', name,
