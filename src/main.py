@@ -13,6 +13,13 @@ def main():
     
     cli = get_default_cli()
 
+    ACCOUNT_LIST = [
+        'account',
+        'list'
+    ]
+    print('run account list')
+    cli.invoke(ACCOUNT_LIST)
+
     ACCOUNT_SET = [
         'account',
         'set',
