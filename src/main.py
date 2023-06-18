@@ -13,6 +13,12 @@ def main():
     
     cli = get_default_cli()
 
+    ACCOUNT_SET = [
+        'account set',
+        '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315'
+    ]
+    cli.invoke(ACCOUNT_SET)
+
     AKS_GET_CREDENTIALS = [
         'aks get-credentials',
         '--resource-group', resource_group,
