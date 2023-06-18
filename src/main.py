@@ -18,6 +18,7 @@ def main():
         'set',
         '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315'
     ]
+    print('run account set')
     cli.invoke(ACCOUNT_SET)
 
     AKS_GET_CREDENTIALS = [
@@ -26,13 +27,14 @@ def main():
         '--resource-group', resource_group,
         '--name', name
     ]
+    print('run aks get-credentials')
     cli.invoke(AKS_GET_CREDENTIALS)
 
     AKS_UPGRADE = [
         'aks',
         'upgrade',
         '--name', name,
-        '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315'
+        '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315',
         '--resource-group', resource_group,
         '--kubernetes-version', kubernetes_version,
         '--control_plane_only', control_plane_only,
@@ -40,6 +42,7 @@ def main():
         '--node_image_only', node_image_only,
         '--yes', 'True'
     ]
+    print('run aks upgrade')
     cli.invoke(AKS_UPGRADE)
 
     # TODO エラー処理
