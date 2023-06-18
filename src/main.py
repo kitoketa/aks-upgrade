@@ -37,9 +37,9 @@ def main():
         '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315',
         '--resource-group', resource_group,
         '--kubernetes-version', kubernetes_version,
-        '--control_plane_only', control_plane_only,
-        '--no_wait', no_wait,
-        '--node_image_only', node_image_only,
+        # '--control_plane_only', control_plane_only,
+        # '--no_wait', no_wait,
+        # '--node_image_only', node_image_only,
         '--yes', 'True'
     ]
     print('run aks upgrade')
