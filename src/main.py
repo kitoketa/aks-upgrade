@@ -13,6 +13,7 @@ def main():
     node_image_only = environ.get('INPUT_NODE_IMAGE_ONLY', False)
 
     ACCOUNT_LIST = [
+        'az',
         'account',
         'list'
     ]
