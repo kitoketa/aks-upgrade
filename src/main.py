@@ -15,7 +15,8 @@ def main():
 
     ACCOUNT_LIST = [
         'account',
-        'list'
+        'list',
+        '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315'
     ]
     print('run account list')
     cli.invoke(ACCOUNT_LIST)
