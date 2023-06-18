@@ -32,6 +32,7 @@ def main():
         'aks',
         'upgrade',
         '--name', name,
+        '--subscription', '1e6bd428-8625-4f07-bb44-f3f6a2dd5315'
         '--resource-group', resource_group,
         '--kubernetes-version', kubernetes_version,
         '--control_plane_only', control_plane_only,
